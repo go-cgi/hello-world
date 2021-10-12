@@ -24,8 +24,6 @@ WORKDIR /
 
 COPY --from=build /server /server
 
-EXPOSE 8080
-
-USER nonroot:nonroot
+EXPOSE 8100
 
 ENTRYPOINT ["/server"]
