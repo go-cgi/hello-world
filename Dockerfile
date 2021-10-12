@@ -18,7 +18,7 @@ RUN go build -o /server
 ## Deploy
 ##
 
-FROM gcr.io/distroless/base-debian10
+FROM alpine
 
 WORKDIR /
 
