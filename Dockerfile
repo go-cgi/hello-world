@@ -8,11 +8,11 @@ WORKDIR /app
 
 COPY go.mod .
 COPY go.sum .
-RUN go mod download
+RUN GOPROXY=https://goproxy.cn go mod download
 
 COPY *.go ./
 
-RUN go build -o /server
+RUN GOPROXY=https://goproxy.cn go build -o /server
 
 ##
 ## Deploy
